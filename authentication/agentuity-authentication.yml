@@ -1,0 +1,46 @@
+generated: '2026-07-17'
+method: searched
+source: https://agentuity.dev/reference/api/ai-gateway.md
+docs: https://agentuity.dev/services/authentication
+summary:
+  types: [http, apiKey, oauth2, openIdConnect]
+  api_key_in: [header]
+  oauth2_flows: [authorizationCode, clientCredentials]
+  primary: bearer-token
+schemes:
+- name: bearerToken
+  type: http
+  scheme: bearer
+  description: >-
+    Most REST API requests require a Bearer token. Pass an API key or SDK key in the
+    Authorization header as `Authorization: Bearer [example key]`. The SDK key is found in
+    the Agentuity Console under project settings and is read from the AGENTUITY_SDK_KEY
+    environment variable by the SDK service clients.
+  header: Authorization
+  format: "Bearer <api_key|sdk_key>"
+  env: AGENTUITY_SDK_KEY
+- name: apiKeys
+  type: apiKey
+  in: header
+  description: >-
+    Project- and organization-scoped API keys (prefix ak_) created and managed via the
+    API Keys API and the CLI. Presented as bearer tokens.
+  id_prefix: ak_
+  docs: https://agentuity.dev/reference/api/api-keys
+- name: oauthApplications
+  type: oauth2
+  description: >-
+    OAuth 2.0 / OIDC applications with client credentials, user consent, and authorization
+    scopes, managed via the OAuth Applications API. Enables "Sign in with Agentuity".
+  docs: https://agentuity.dev/reference/api/oauth
+- name: agentuityOIDC
+  type: openIdConnect
+  description: >-
+    Agentuity OIDC provider — add Agentuity account sign-in and scoped access to your app
+    with OAuth 2.0 and OIDC ("Sign in with Agentuity").
+  docs: https://agentuity.dev/services/oidc-provider
+public_endpoints:
+- description: A small number of endpoints are public and require no auth (e.g. AI Gateway GET /models).
+notes: >-
+  Auth model captured from the published REST API reference (no OpenAPI/Swagger spec is
+  published, so this profile is search-derived from the docs rather than machine-derived).
