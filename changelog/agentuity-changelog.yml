@@ -1,0 +1,29 @@
+generated: '2026-07-17'
+method: searched
+source: https://github.com/agentuity/sdk/releases
+scheme: semver
+current_version: '3.1.9'
+subject: "@agentuity/sdk and @agentuity/cli (SDK monorepo)"
+notes: >-
+  Agentuity ships dated, versioned releases from the SDK monorepo (github.com/agentuity/sdk).
+  The CLI and SDK are versioned together in the v3 line. Recent window captured from the
+  GitHub Releases feed; the live releases page is the source of truth.
+entries:
+- version: v3.1.9
+  date: '2026-07-08'
+  type: patch
+- version: v3.1.8
+  date: '2026-07-06'
+  type: patch
+- version: v3.1.7
+  date: '2026-07-03'
+  type: patch
+- version: v3.1.6
+  date: '2026-07-02'
+  type: patch
+- version: v3.1.5
+  date: '2026-06-29'
+  type: patch
+related:
+  changelog_agent: https://github.com/agentuity/agent-changelog
+  sdk_js_releases: https://github.com/agentuity/sdk-js/releases

@@ -1,7 +1,30 @@
 aid: agentuity
 name: Agentuity
-description: Agentuity is a company surfaced as a portfolio company of bloomberg-beta and added to the
-  API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Agentuity is a full-stack cloud platform for building, deploying, and operating AI
+  agents and the framework apps around them. Developers keep their existing framework
+  (Next.js, Hono, React Router, SvelteKit, Nuxt, Astro, Vite React, TanStack Start) and
+  attach Agentuity service clients for key-value, vector, object, and Postgres storage,
+  durable streams, queues, webhooks, email, and cron schedules, plus sandboxes (isolated
+  Linux containers), an AI Gateway that routes to OpenAI/Anthropic/Groq/Google, and
+  OpenTelemetry observability. The agentuity CLI scaffolds projects, runs local
+  development with environment wiring, and deploys to managed cloud, private cloud,
+  on-prem, multi-cloud, or edge via the Gravity Network. A documented REST API,
+  first-party JavaScript/TypeScript, Python, and Go SDKs, published Agent Skills, and
+  Claude Code / OpenCode plugins round out the developer surface.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://agentuity.com/og-image.png
 url: https://raw.githubusercontent.com/api-evangelist/agentuity/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -14,12 +37,104 @@ created: '2026-07-17'
 modified: '2026-07-17'
 tags:
 - Company
-apis: []
+- Agents
+- Artificial Intelligence
+- Cloud
+- Serverless
+- Platform
+- Developer Tools
+- LLM
+- Infrastructure
+- Deployment
+- AI Gateway
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+apis:
+- name: Agentuity Platform REST API
+  description: >-
+    Direct HTTP access to Agentuity platform services — projects, deployments, API keys,
+    OAuth applications, storage (key-value, vector, object, Postgres), message queues,
+    durable streams, sandboxes, schedules, webhooks, workflows, sessions, tasks, threads,
+    and the AI Gateway. Bearer-token authenticated with an API or SDK key.
+  humanURL: https://agentuity.dev/reference/api
+  baseURL: https://api.agentuity.cloud
+  properties:
+  - type: APIReference
+    url: https://agentuity.dev/reference/api
+  - type: Documentation
+    url: https://agentuity.dev
+  - type: Authentication
+    url: authentication/agentuity-authentication.yml
 common:
 - type: Website
   url: https://www.agentuity.com/
+- type: DeveloperPortal
+  url: https://app.agentuity.com
+- type: Documentation
+  url: https://agentuity.dev
+- type: APIReference
+  url: https://agentuity.dev/reference/api
+- type: GettingStarted
+  url: https://agentuity.dev/get-started
+- type: Support
+  url: https://discord.gg/UPRUw4cn65
+- type: Blog
+  url: https://agentuity.com/blog
+- type: GitHubOrganization
+  url: https://github.com/agentuity
+- type: Pricing
+  url: https://agentuity.com/pricing
+- type: SignUp
+  url: https://app.agentuity.com/sign-up
+- type: Login
+  url: https://app.agentuity.com
+- type: Console
+  url: https://app.agentuity.com
+- type: TermsOfService
+  url: https://agentuity.com/terms
+- type: PrivacyPolicy
+  url: https://agentuity.com/privacy
+- type: LLMsTxt
+  url: llms/agentuity-llms.txt
+- type: Packages
+  url: packages/agentuity-packages.yml
+- type: SDKs
+  url: packages/agentuity-packages.yml
+- type: CLI
+  url: cli/agentuity-cli.yml
+- type: Authentication
+  url: authentication/agentuity-authentication.yml
+- type: Conventions
+  url: conventions/agentuity-conventions.yml
+- type: ChangeLog
+  url: changelog/agentuity-changelog.yml
+- type: Lifecycle
+  url: lifecycle/agentuity-lifecycle.yml
+- type: Conformance
+  url: conformance/agentuity-conformance.yml
+- type: Compliance
+  url: https://agentuity.com/security
+- type: DomainSecurity
+  url: security/agentuity-domain-security.yml
+- type: VulnerabilityDisclosure
+  url: security/agentuity-vulnerability-disclosure.yml
+- type: Security
+  url: https://agentuity.com/security
+- type: TrustCenter
+  url: security/agentuity-trust-center.yml
+- type: WellKnown
+  url: well-known/agentuity-well-known.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: Components
+  url: components/agentuity-components.yml
+- type: Webhooks
+  url: asyncapi/agentuity-webhooks.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

@@ -1,0 +1,40 @@
+generated: '2026-07-17'
+method: searched
+source: >-
+  https://agentuity.dev/services/oidc-provider, https://agentuity.dev/reference/api/oauth,
+  https://agentuity.com/security
+standards:
+- id: oauth2
+  conforms: true
+  evidence: >-
+    OAuth Applications API manages OAuth 2.0 applications with client credentials, user
+    consent, and authorization scopes.
+- id: oidc
+  conforms: true
+  evidence: >-
+    Agentuity OIDC provider offers "Sign in with Agentuity" via OAuth 2.0 and OpenID Connect.
+- id: opentelemetry
+  conforms: true
+  evidence: Observability is delivered via OpenTelemetry traces and structured logs.
+- id: s3-compatible
+  conforms: true
+  evidence: Object storage exposes S3-compatible clients and buckets.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: REST API uses a custom {success,data,message,error} envelope, not application/problem+json.
+- id: soc2
+  conforms: true
+  evidence: SOC 2 listed on the Agentuity security/trust page.
+- id: hipaa
+  conforms: true
+  evidence: HIPAA listed on the Agentuity security/trust page.
+- id: gdpr
+  conforms: true
+  evidence: GDPR listed on the Agentuity security/trust page.
+- id: fips-140
+  conforms: true
+  evidence: FIPS 140 listed on the Agentuity security/trust page.
+compliance_program:
+  url: https://agentuity.com/security
+  certifications: [SOC 2, HIPAA, GDPR, FIPS 140]
+  note: Published compliance posture — feeds the type:Compliance pointer in apis.yml.

@@ -1,0 +1,56 @@
+generated: '2026-07-17'
+method: searched
+source: https://agentuity.dev/reference/api
+docs: https://agentuity.dev/reference/api
+authentication:
+  style: bearer-token
+  header: Authorization
+  format: "Bearer <api_key|sdk_key>"
+  ref: authentication/agentuity-authentication.yml
+base_urls:
+  platform_api: https://api.agentuity.cloud
+  ai_gateway: https://aigateway.agentuity.cloud
+  console: https://app.agentuity.com
+error_envelope:
+  style: custom-json
+  rfc9457: false
+  shape:
+    success: boolean
+    data: object
+    message: string
+    error: string
+  description: >-
+    REST responses use a consistent JSON envelope with a boolean `success` flag, a `data`
+    payload on success, and a `message`/`error` string on failure. This is a custom
+    envelope, not RFC 9457 application/problem+json.
+identifiers:
+  style: prefixed-ids
+  examples:
+    api_key: ak_
+    project: proj_
+    organization: org_
+  description: Resource identifiers carry type prefixes (e.g. ak_, proj_, org_).
+versioning:
+  scheme: platform-generation
+  current: v3
+  notes: >-
+    Platform is on the v3 framework-first generation; v2 runtime apps are supported via a
+    documented migration path and migration CLI. See lifecycle/agentuity-lifecycle.yml.
+idempotency:
+  supported: unknown
+  notes: >-
+    No documented request-level Idempotency-Key header was found in the public REST API
+    reference. Not asserted (no Idempotency pointer emitted) to avoid fabrication.
+pagination:
+  style: unknown
+  notes: List endpoints exist across services; a single documented pagination convention was not located in the public reference.
+webhooks:
+  supported: true
+  ref: asyncapi/agentuity-webhooks.yml
+  description: >-
+    First-class webhook surface — inbound webhook handlers and outbound webhook
+    destinations, receipts, deliveries, and analytics via the Webhooks API.
+cross_links:
+  authentication: authentication/agentuity-authentication.yml
+  lifecycle: lifecycle/agentuity-lifecycle.yml
+  conformance: conformance/agentuity-conformance.yml

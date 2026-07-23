@@ -1,0 +1,33 @@
+generated: '2026-07-17'
+method: searched
+source: https://agentuity.dev/reference/api/webhooks
+spec_type: Webhooks
+docs: https://agentuity.dev/reference/api/webhooks
+description: >-
+  Agentuity provides a first-class webhook surface. Inbound webhooks route external events
+  to agents/handlers, and outbound webhook destinations deliver platform events to your
+  endpoints with receipts, delivery tracking, and analytics. Related event-routing surfaces
+  include Message Queues, Durable Streams, Schedules (cron), and Workflows.
+capabilities:
+- Manage webhook endpoints and destinations
+- Delivery receipts and delivery tracking
+- Webhook analytics
+- Inbound webhook handlers as agent invocation routes (HTTP, cron, webhooks)
+related_event_surfaces:
+- name: Message Queues API
+  docs: https://agentuity.dev/reference/api/queues
+  description: Worker and pub/sub queues — publish, consume, and manage messages.
+- name: Durable Streams API
+  docs: https://agentuity.dev/reference/api/streams
+  description: Durable, resumable data streams with public URLs.
+- name: Schedules API
+  docs: https://agentuity.dev/reference/api/schedules
+  description: Cron-based scheduled jobs with destinations and delivery tracking.
+- name: Workflows API
+  docs: https://agentuity.dev/reference/api/workflows
+  description: Route events from sources to destinations.
+asyncapi_document:
+  found: false
+  notes: >-
+    Agentuity documents webhooks and event routing in its REST reference but does not
+    publish an AsyncAPI document. Captured as a Webhooks surface (no fabricated AsyncAPI).

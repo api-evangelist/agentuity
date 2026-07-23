@@ -1,0 +1,74 @@
+generated: '2026-07-17'
+method: searched
+source: >-
+  https://www.npmjs.com/org/agentuity, https://pypi.org/project/agentuity/,
+  https://github.com/agentuity
+packages:
+- language: javascript
+  registry: npm
+  name: "@agentuity/sdk"
+  url: https://www.npmjs.com/package/@agentuity/sdk
+  install: npm install @agentuity/sdk
+  repository: https://github.com/agentuity/sdk-js
+  license: Apache-2.0
+  official: true
+  description: The Agentuity SDK for Node.js and Bun.
+- language: javascript
+  registry: npm
+  name: create-agentuity
+  url: https://www.npmjs.com/package/create-agentuity
+  install: npm create agentuity
+  official: true
+  description: Scaffold a new Agentuity project.
+- language: javascript
+  registry: npm
+  name: "@agentuity/cli"
+  url: https://www.npmjs.com/package/@agentuity/cli
+  install: npm install -g @agentuity/cli
+  license: Apache-2.0
+  official: true
+  description: The Agentuity command line tool — project scaffolding, dev, deploy.
+- language: python
+  registry: pypi
+  name: agentuity
+  url: https://pypi.org/project/agentuity/
+  install: pip install agentuity
+  repository: https://github.com/agentuity/sdk-py
+  official: true
+  description: Agentuity SDK for Python.
+- language: go
+  registry: pkg.go.dev
+  name: github.com/agentuity/cli
+  url: https://github.com/agentuity/cli
+  install: go install github.com/agentuity/cli@latest
+  official: true
+  description: The Agentuity Cloud Platform CLI (Go).
+# Standalone per-service npm clients from the @agentuity/* SDK monorepo (all official, Apache-2.0)
+standalone_service_clients:
+  registry: npm
+  scope: "@agentuity"
+  repository: https://github.com/agentuity/sdk
+  official: true
+  packages:
+  - "@agentuity/auth"
+  - "@agentuity/core"
+  - "@agentuity/client"
+  - "@agentuity/config"
+  - "@agentuity/adapter"
+  - "@agentuity/api"
+  - "@agentuity/aigateway"
+  - "@agentuity/db"
+  - "@agentuity/keyvalue"
+  - "@agentuity/vector"
+  - "@agentuity/storage"
+  - "@agentuity/queue"
+  - "@agentuity/schedule"
+  - "@agentuity/task"
+  - "@agentuity/email"
+  - "@agentuity/analytics"
+  - "@agentuity/skills"
+notes: >-
+  First-party client libraries in JavaScript/TypeScript (Node.js + Bun), Python, and Go.
+  The @agentuity npm scope also publishes ~17 standalone per-service clients that mirror
+  the platform services (key-value, vector, object storage, database, queue, schedule,
+  task, email, AI gateway, auth, analytics). Homebrew tap: agentuity/homebrew-tap.

@@ -1,0 +1,265 @@
+# Agentuity Documentation
+
+> The full-stack platform for AI agents.
+
+Agentuity runs framework apps with agent services attached. Start with a
+framework such as Next.js, Hono, React Router, SvelteKit, Nuxt, Astro, Vite
+React, or TanStack Start, then add Agentuity service clients in server-side
+routes, handlers, jobs, and scripts.
+
+Use the `agentuity` CLI to create or import projects, run local development
+with Agentuity environment wiring, inspect deployment bundles, and deploy only
+after explicit approval because deploy mutates cloud state.
+
+## Built-in services
+
+Services include, but are not limited to:
+
+- **Framework apps**: Next.js, Hono, React Router, SvelteKit, Nuxt, Astro, Vite React, and TanStack Start
+- **Model-backed workflows**: typed server functions, streaming routes, tool calls, and background work
+- **Data and storage**: Postgres, key-value, vector, object storage, and durable streams
+- **Sandboxes**: isolated runtimes for untrusted or generated code
+- **Messaging and scheduling**: queues, webhooks, email, and cron-style schedules
+- **Authentication**: sessions, API keys, bearer tokens, and OAuth apps
+- **AI Gateway**: LLM provider routing with usage and cost visibility
+- **Observability**: OpenTelemetry traces, structured logs, and session analytics
+- **Coder**: coding sessions with repos, tools, live events, replay, and resume
+
+## Notes
+
+- These markdown files are generated from the MDX docs for coding agents and
+  LLM retrieval. Each `.md` page should be readable without site navigation.
+- For agent-driven setup, start with `agentuity ai intro`, then run the same
+  create, import, dev, build, and deploy commands a human would run.
+- Use standalone service clients from server-only code. Do not assume legacy
+  `ctx.*`, `createApp()`, or `createAgent()` patterns unless you are reading
+  migration or v2 compatibility pages.
+- Local development should run through `agentuity dev` when you want Agentuity
+  env wiring and AI Gateway routing. For deployed provider behavior, check the
+  relevant AI Gateway and environment variable docs.
+
+## Get Started
+
+- [Get Started](https://agentuity.dev/get-started.md): Start with your framework, add Agentuity services, and deploy with the CLI
+- [What is Agentuity?](https://agentuity.dev/get-started/what-is-agentuity.md): Deploy framework apps, APIs, static sites, backend work, and agents on Agentuity
+- [Installation](https://agentuity.dev/get-started/installation.md): Install the Agentuity CLI, sign in, and create a framework starter
+- [Quickstart](https://agentuity.dev/get-started/quickstart.md): Scaffold a Next.js starter, run it locally, and deploy it
+- [Project Structure](https://agentuity.dev/get-started/project-structure.md): See exactly what the create flow adds to a framework app
+- [App Configuration](https://agentuity.dev/get-started/app-configuration.md): Configure scripts, agentuity.json, env vars, and service clients
+- [Add Agentuity to an existing app](https://agentuity.dev/get-started/import-existing-app.md): Add Agentuity services and local validation to an app you already have.
+
+## Frameworks
+
+- [Frameworks](https://agentuity.dev/frameworks.md): Add Agentuity to a framework you already use, without replacing the router
+- [Using Next.js with Agentuity](https://agentuity.dev/frameworks/nextjs.md): Connect Agentuity service clients, local development, and deploy packaging to an App Router project
+- [Using Nuxt with Agentuity](https://agentuity.dev/frameworks/nuxt.md): Add Agentuity service clients, local development, and deployment metadata to a Nuxt app
+- [Using React Router with Agentuity](https://agentuity.dev/frameworks/react-router.md): Connect a React Router framework-mode app to Agentuity services and deploy it from the CLI
+- [Using SvelteKit with Agentuity](https://agentuity.dev/frameworks/sveltekit.md): Add Agentuity service clients, local development, and deploy validation to a SvelteKit app
+- [Using Astro with Agentuity](https://agentuity.dev/frameworks/astro.md): Add Agentuity service clients, local development, and deploy validation to an Astro app
+- [Using Hono with Agentuity](https://agentuity.dev/frameworks/hono.md): Add Agentuity service clients and AI Gateway routing to a Hono app
+- [Using Vite + React with Agentuity](https://agentuity.dev/frameworks/vite-react.md): Build a Vite React SPA with a Bun server boundary for secrets and Agentuity service clients
+- [Using TanStack Start with Agentuity](https://agentuity.dev/frameworks/tanstack-start.md): Add Agentuity service clients to a TanStack Start app and validate the detected build path before deploying
+
+## Build
+
+- [Build](https://agentuity.dev/build.md): Build apps, APIs, background work, and agent workflows on Agentuity
+
+### Apps and APIs
+
+- [Apps and APIs](https://agentuity.dev/build/apps-and-apis.md): Build web apps, backend APIs, static sites, and background work on Agentuity
+- [Web Apps](https://agentuity.dev/build/apps-and-apis/web-apps.md): Use Agentuity services from framework routes, server functions, and browser-facing apps
+- [Backend APIs](https://agentuity.dev/build/apps-and-apis/backend-apis.md): Deploy backend-only HTTP services, JSON APIs, and webhook handlers on Agentuity
+- [Static Sites](https://agentuity.dev/build/apps-and-apis/static-sites.md): Deploy plain HTML, static framework output, and SPA bundles on Agentuity
+- [Background Work](https://agentuity.dev/build/apps-and-apis/background-work.md): Use queues, status records, and durable streams for work that should outlive a request
+
+### Agents
+
+- [Agents](https://agentuity.dev/build/agents.md): Structure model-backed workflows as plain server functions called from routes, workers, schedules, and scripts
+- [Chat and Streaming](https://agentuity.dev/build/agents/chat-and-streaming.md): Stream model output from framework routes and persist chat history with KV storage
+- [Tool Calling](https://agentuity.dev/build/agents/tool-calling.md): Let models call bounded app functions from framework routes
+- [State and Memory](https://agentuity.dev/build/agents/state-and-memory.md): Store app state explicitly with KV, databases, cookies, and service clients
+- [Building Coding Agents](https://agentuity.dev/build/agents/coding-agent.md): Choose Coder, Sandbox, or app workflows for agents that edit code, run commands, and report results.
+
+## Services
+
+- [Services](https://agentuity.dev/services.md): Agentuity service clients for identity, storage, messaging, observability, and execution
+- [Queues](https://agentuity.dev/services/queues.md): Publish messages for async processing, webhooks, and event-driven workflows
+- [Email](https://agentuity.dev/services/email.md): Send and receive emails with managed addresses, destinations, and delivery tracking
+- [Tasks](https://agentuity.dev/services/tasks.md): Track work items, issues, and agent activity with lifecycle management
+- [Schedules](https://agentuity.dev/services/schedules.md): Create platform-managed cron jobs with HTTP and sandbox destinations
+- [Webhooks](https://agentuity.dev/services/webhooks.md): Create webhook endpoints to receive HTTP callbacks with delivery tracking and retry
+- [AI Gateway](https://agentuity.dev/services/ai-gateway.md): Use supported model providers through Agentuity
+- [Coder](https://agentuity.dev/services/coder.md): Run coding agents in cloud sessions you can start, inspect, share, and resume
+- [Choosing Authentication](https://agentuity.dev/services/authentication.md): Choose between Agentuity OIDC and framework-owned authentication for v3 apps
+- [Sign in with Agentuity](https://agentuity.dev/services/oidc-provider.md): Add Agentuity account sign-in and scoped access to your app with OAuth 2.0 and OIDC
+
+### Storage
+
+- [Storage](https://agentuity.dev/services/storage.md): Persistent storage clients for framework apps and deployed services
+- [Key-Value Storage](https://agentuity.dev/services/storage/key-value.md): Store small durable values by namespace and key with optional TTL
+- [Vector Storage](https://agentuity.dev/services/storage/vector.md): Store documents and embeddings for semantic search and retrieval
+- [Object Storage (S3)](https://agentuity.dev/services/storage/object.md): Store files and binary data with S3-compatible clients
+- [Durable Streams](https://agentuity.dev/services/storage/durable-streams.md): Write generated output incrementally and keep it available by URL
+- [Custom Storage](https://agentuity.dev/services/storage/custom.md): Swap storage backends behind small app-owned interfaces
+
+### Database
+
+- [Database](https://agentuity.dev/services/database.md): Use Agentuity-managed Postgres when your app needs relational data
+- [Postgres Clients](https://agentuity.dev/services/database/postgres.md): Query Agentuity-managed Postgres from framework apps and scripts
+- [Drizzle ORM](https://agentuity.dev/services/database/drizzle.md): Type-safe database access with Drizzle ORM and Agentuity-managed Postgres
+
+### Sandbox
+
+- [Running Code in Sandboxes](https://agentuity.dev/services/sandbox.md): Run code in isolated containers with configurable runtimes, resources, and file access
+- [Using the Sandbox API](https://agentuity.dev/services/sandbox/sdk-usage.md): Create, execute, inspect, and clean up sandboxes with SandboxClient
+- [Ephemeral workflows](https://agentuity.dev/services/sandbox/ephemeral-workflows.md): Run short-lived data and code workflows in isolated sandboxes.
+- [Coding agents in sandboxes](https://agentuity.dev/services/sandbox/coding-agents.md): Run coding-agent runtimes in isolated sandboxes when you need direct control over the tool process.
+- [Creating and Using Snapshots](https://agentuity.dev/services/sandbox/snapshots.md): Save sandbox filesystem states and reuse them as bases for new sandboxes
+
+### Observability
+
+- [Observability](https://agentuity.dev/services/observability.md): Monitor framework apps with telemetry, sessions, and deployment logs
+- [Logging](https://agentuity.dev/services/observability/logging.md): Write structured logs from framework apps and Hono routes
+- [Tracing](https://agentuity.dev/services/observability/tracing.md): OpenTelemetry spans for performance debugging and operation tracking
+- [Evals and testing](https://agentuity.dev/services/observability/evals-and-testing.md): Add eval workflows with output contracts, judges, traces, and external tools.
+- [Sessions & Debugging](https://agentuity.dev/services/observability/sessions-debugging.md): Inspect session records, logs, and timelines
+- [Web Analytics](https://agentuity.dev/services/observability/web-analytics.md): Track page views, user engagement, and custom events in your frontend
+
+## Deploy & Operate
+
+- [Deploy & Operate](https://agentuity.dev/deploy-operate.md): Run a framework app locally, package it, deploy it, and manage the env values it needs.
+- [Running Local Development](https://agentuity.dev/deploy-operate/local-development.md): Run your framework dev script with Agentuity environment wiring.
+- [Deploying Framework Apps](https://agentuity.dev/deploy-operate/deploy-framework-apps.md): Register, configure, package, and deploy a framework project with the Agentuity CLI.
+- [Attaching Custom Domains](https://agentuity.dev/deploy-operate/custom-domains.md): Attach your own domain to an Agentuity project, validate DNS, and let TLS provision automatically.
+- [Managing Environment Variables](https://agentuity.dev/deploy-operate/environment-variables.md): Manage local .env files, cloud project variables, public values, and secrets.
+
+## Cookbook
+
+- [Cookbook](https://agentuity.dev/cookbook.md): Tutorials, reusable patterns, and external integrations for Agentuity apps
+
+### Tutorials
+
+- [Build a RAG Agent](https://agentuity.dev/cookbook/tutorials/rag-agent.md): Index documents into vector storage, retrieve the closest matches, and answer with citations
+
+### Patterns
+
+- [Chat with Conversation History](https://agentuity.dev/cookbook/patterns/chat-with-history.md): Store chat history with key-value storage from a framework route
+- [Product Search with Vector](https://agentuity.dev/cookbook/patterns/product-search.md): Semantic product search with metadata filters and an optional model recommendation
+- [Run External Coding Tools in Sandbox](https://agentuity.dev/cookbook/patterns/running-external-coding-tools-in-sandbox.md): Run a formatter, linter, test command, or agent CLI in a disposable Sandbox workflow
+
+#### Coder
+
+- [Managing Coder Sessions with the SDK](https://agentuity.dev/cookbook/patterns/creating-coder-sessions-with-sdk.md): Create a Coder session, read its state, and manage its lifecycle with CoderClient
+- [Creating Loop-Mode Coder Sessions](https://agentuity.dev/cookbook/patterns/creating-loop-mode-coder-sessions.md): Create a loop-mode Coder session and inspect its workflow state with getLoopState
+- [Choosing Coder Agents for a Session](https://agentuity.dev/cookbook/patterns/choosing-built-in-agents-for-a-coder-session.md): Use enabledAgents and defaultAgent to choose which built-in or published custom Coder agents are available in a session
+- [Attaching Skills to a Coder Session](https://agentuity.dev/cookbook/patterns/attaching-skills-to-a-coder-session.md): Save skills, group them into buckets, and attach them to a Coder session with CoderClient
+- [Using Workspaces to Reuse Repos, Skills, and Agent Selection](https://agentuity.dev/cookbook/patterns/using-workspaces-to-reuse-repos-skills-and-agent-selection.md): Store reusable Coder setup in a workspace and attach it to sessions with workspaceId
+- [Reconnecting to Existing Coder Sessions](https://agentuity.dev/cookbook/patterns/preparing-coder-sessions-for-remote-attach.md): Use listConnectableSessions and prepareSessionForRemoteAttach to find sessions you can still reconnect to
+- [Observing a Coder Session through the Hub](https://agentuity.dev/cookbook/patterns/observing-a-coder-session-through-the-hub.md): Subscribe to a session's live event stream, page through its event history, and hydrate a client from the durable replay stream
+
+#### Research
+
+- [Autonomous Research with Anthropic Tool Use](https://agentuity.dev/cookbook/patterns/autonomous-research.md): Build a recursive research loop using the Anthropic SDK Messages API and native tool_use blocks
+- [Web Exploration with Sandboxes](https://agentuity.dev/cookbook/patterns/web-exploration.md): Run a headless browser inside a sandbox so an agent can navigate, screenshot, and extract content under isolation
+
+#### Background Work
+
+- [Webhook Handler](https://agentuity.dev/cookbook/patterns/webhook-handler.md): Verify a signed external webhook in a framework route and hand the payload to a queue
+- [Cron with Cached Storage](https://agentuity.dev/cookbook/patterns/cron-with-storage.md): Refresh data on a schedule, cache it in key-value storage, and serve fast reads from a normal route
+- [Fire-and-Forget Background Work](https://agentuity.dev/cookbook/patterns/background-tasks.md): Return a fast response while side effects continue in the background, plus when to upgrade to a durable queue
+
+#### Evals
+
+- [LLM as a Judge](https://agentuity.dev/cookbook/patterns/llm-as-a-judge.md): Use a model to evaluate another model's output for quality, grounding, or comparison
+- [Using OpenAI Evals API](https://agentuity.dev/cookbook/patterns/openai-evals-api.md): Run OpenAI Evals API suites against prompts that live in an Agentuity app
+- [Running Braintrust Evals](https://agentuity.dev/cookbook/patterns/braintrust-evals.md): Run Braintrust evals against app-owned Agentuity functions
+
+#### Logging & Tracing
+
+- [Structured Logging with Pino](https://agentuity.dev/cookbook/patterns/structured-logging-with-pino.md): Keep app-owned Pino logs while adding Agentuity services beside them
+- [Using LogTape with an OpenTelemetry Sink](https://agentuity.dev/cookbook/patterns/logtape-structured-logging.md): Keep LogTape structured logs app-owned while optionally exporting logs through OpenTelemetry
+- [Adding OpenTelemetry Spans to App Routes](https://agentuity.dev/cookbook/patterns/opentelemetry-route-spans.md): Keep existing OpenTelemetry startup and add route-level spans with the standard API
+- [Sending Traces to Langfuse](https://agentuity.dev/cookbook/patterns/langfuse-otel-tracing.md): Keep Langfuse as the trace backend for Agentuity app code
+
+#### App Structure
+
+- [Type-Safe API Calls with Hono RPC and TanStack Query](https://agentuity.dev/cookbook/patterns/hono-rpc-tanstack-query.md): Share Hono route types with a React client and wrap calls in TanStack Query
+- [SDK Utilities for External Apps](https://agentuity.dev/cookbook/patterns/server-utilities.md): Use storage, queues, logging, and error handling utilities from external backends like Next.js or Express
+- [Tailwind CSS Setup](https://agentuity.dev/cookbook/patterns/tailwind-setup.md): Add Tailwind CSS to the framework app you deploy with Agentuity
+- [Install Agent Skills with npm](https://agentuity.dev/cookbook/patterns/install-agent-skills-with-npm.md): Add Agentuity skill guidance to an existing project with @agentuity/skills and skills-npm
+
+### Integrations
+
+- [Mastra](https://agentuity.dev/cookbook/integrations/mastra.md): Run a Mastra Agent inside a framework route with key-value memory
+- [OpenAI Agents SDK](https://agentuity.dev/cookbook/integrations/openai-agents.md): Run an OpenAI Agents SDK agent loop inside a framework route
+- [Claude Agent SDK](https://agentuity.dev/cookbook/integrations/claude-agent.md): Run multi-turn Claude Agent sessions from a framework route with key-value session storage
+- [LangChain](https://agentuity.dev/cookbook/integrations/langchain.md): Run a LangChain ReAct agent inside a framework route with tools and middleware
+
+## Reference
+
+- [Reference](https://agentuity.dev/reference.md): Reference docs for Agentuity v3 clients, framework apps, CLI, and REST API
+- [Using Standalone Packages](https://agentuity.dev/reference/standalone-packages.md): Use Agentuity service clients from Node.js, Bun, and server framework code
+- [Automating Deployments with the GitHub App](https://agentuity.dev/reference/github-app.md): How the Agentuity GitHub App automates deployments from your repositories.
+- [Gravity Network](https://agentuity.dev/reference/gravity-network.md): The layered infrastructure powering Agentuity's services
+
+### SDK Reference
+
+- [SDK Reference](https://agentuity.dev/reference/sdk-reference.md): TypeScript SDK surfaces for standalone clients, framework code, and app workflows
+- [Coder Client](https://agentuity.dev/reference/sdk-reference/coder.md): Manage AI coding sessions, workspaces, and skills with CoderClient
+- [Calling App Code](https://agentuity.dev/reference/sdk-reference/communication.md): Call shared workflow functions from routes, workers, scripts, and other server code
+- [Schema Validation](https://agentuity.dev/reference/sdk-reference/schema.md): Validate route inputs, shared function inputs, and structured outputs with StandardSchema support
+
+### API Reference
+
+- [REST API Reference](https://agentuity.dev/reference/api.md): Direct HTTP access to Agentuity platform services
+- [AI Gateway API](https://agentuity.dev/reference/api/ai-gateway.md): List supported LLM models and run routed AI Gateway completions
+- [API Keys API](https://agentuity.dev/reference/api/api-keys.md): Create and manage API keys for authentication
+- [Coder API](https://agentuity.dev/reference/api/coder.md): Manage Coder sessions, custom agents, session data, loop state, and known users through the REST API
+- [Databases API](https://agentuity.dev/reference/api/database.md): Execute queries, inspect tables, and monitor database performance
+- [Durable Streams API](https://agentuity.dev/reference/api/streams.md): Create durable, resumable data streams with public URLs
+- [Emails API](https://agentuity.dev/reference/api/email.md): Send and receive emails with managed addresses and webhook destinations
+- [Key-Value Storage API](https://agentuity.dev/reference/api/key-value.md): Store and retrieve arbitrary data by key within namespaces
+- [Machines API](https://agentuity.dev/reference/api/machines.md): Manage compute nodes and organization authentication enrollment
+- [Message Queues API](https://agentuity.dev/reference/api/queues.md): Publish, consume, and manage messages with worker and pub/sub queues
+- [OAuth Applications API](https://agentuity.dev/reference/api/oauth.md): Manage OAuth 2.0/OIDC applications, client credentials, user consent, and authorization scopes
+- [Object Storage API](https://agentuity.dev/reference/api/object-storage.md): Store and manage files and binary objects in buckets
+- [Organizations API](https://agentuity.dev/reference/api/organizations.md): Manage organizations, environment variables, and org-level resources
+- [Projects API](https://agentuity.dev/reference/api/projects.md): Full project lifecycle management including deployments, agents, environment variables, and hostnames
+- [Regions API](https://agentuity.dev/reference/api/regions.md): List available cloud regions and manage per-region resources
+- [Sandboxes API](https://agentuity.dev/reference/api/sandboxes.md): Create and manage isolated execution environments with full lifecycle, file system, snapshot, and checkpoint support
+- [Schedules API](https://agentuity.dev/reference/api/schedules.md): Create and manage cron-based scheduled jobs with destinations and delivery tracking
+- [Sessions API](https://agentuity.dev/reference/api/sessions.md): View agent execution sessions with timing, cost, and observability data
+- [Tasks API](https://agentuity.dev/reference/api/tasks.md): Full-featured task management with epics, features, bugs, comments, tags, attachments, and activity tracking
+- [Threads API](https://agentuity.dev/reference/api/threads.md): Manage conversation threads for agent session state and user data
+- [Users API](https://agentuity.dev/reference/api/user.md): Get authenticated user information and organization memberships
+- [Vector Search API](https://agentuity.dev/reference/api/vector.md): Semantic search with automatic embedding generation
+- [Webhooks API](https://agentuity.dev/reference/api/webhooks.md): Manage webhook endpoints, destinations, receipts, deliveries, and analytics
+- [Workflows API](https://agentuity.dev/reference/api/workflows.md): Create and manage workflows that route events from sources to destinations
+
+### CLI
+
+- [CLI Reference](https://agentuity.dev/reference/cli.md): Command-line tools for framework apps, deployment, and Agentuity resources
+- [Agent Skills](https://agentuity.dev/reference/cli/agent-skills.md): Install and sync Agentuity Agent Skills from npm or with the skills CLI
+- [AI Commands](https://agentuity.dev/reference/cli/ai-commands.md): CLI commands for AI agents, IDE integration, and schema inspection.
+- [Building Deployment Bundles](https://agentuity.dev/reference/cli/build-configuration.md): Build framework apps into Agentuity deployment bundles with launch metadata and static assets.
+- [Claude Code Plugin](https://agentuity.dev/reference/cli/claude-code-plugin.md): Install the Agentuity plugin for Claude Code to get auto-activated skills for deploying and building on Agentuity.
+- [Coder Commands](https://agentuity.dev/reference/cli/coder.md): Start and manage AI coding sessions connected to the Coder Hub
+- [Configuration Commands](https://agentuity.dev/reference/cli/configuration.md): Manage environment variables, secrets, and API keys from the CLI.
+- [Debugging Deployments](https://agentuity.dev/reference/cli/debugging.md): SSH into containers, inspect sessions, and troubleshoot issues in your deployed agents.
+- [Deploying to the Cloud](https://agentuity.dev/reference/cli/deployment.md): Deploy registered framework apps to Agentuity Cloud.
+- [Local Development](https://agentuity.dev/reference/cli/development.md): Run your framework development server with Agentuity environment wiring.
+- [Getting Started with the CLI](https://agentuity.dev/reference/cli/getting-started.md): Install the Agentuity CLI, sign in, create framework projects, and register existing apps.
+- [Connecting GitHub Repositories](https://agentuity.dev/reference/cli/git-integration.md): Link your GitHub account and repositories to enable preview deployments and CI/CD.
+- [Infrastructure Monitoring](https://agentuity.dev/reference/cli/monitoring.md): Monitor machine health and resource usage from the CLI in real time or as a snapshot
+- [Managing OAuth Applications](https://agentuity.dev/reference/cli/oauth.md): Create and manage OAuth/OIDC applications from the CLI
+- [OpenCode Plugin](https://agentuity.dev/reference/cli/opencode-plugin.md): Install the Agentuity plugin for OpenCode and configure Agentuity Coder agents
+- [CLI Profiles](https://agentuity.dev/reference/cli/profiles.md): Use separate CLI profiles for different accounts, organizations, and environments.
+- [Sandbox Commands](https://agentuity.dev/reference/cli/sandbox.md): Create and manage isolated execution environments from the CLI
+- [Storage Commands](https://agentuity.dev/reference/cli/storage.md): Manage Key-Value, S3, Vector, Database, and Stream storage from the CLI.
+
+## Migration
+
+- [Migration](https://agentuity.dev/migration.md): Move existing Agentuity projects toward the v3 framework-first model
+- [Migrating from v2 to v3](https://agentuity.dev/migration/from-v2.md): Move a v2 runtime app toward the v3 framework-first app shape.
+- [Moving from Runtime Apps to Framework Apps](https://agentuity.dev/migration/runtime-to-frameworks.md): Translate v2 runtime concepts into the v3 framework-first model.
+- [Using the Migration CLI](https://agentuity.dev/migration/migrate-cli.md): Run the Agentuity migration tool for v2 to v3 projects.

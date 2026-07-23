@@ -1,0 +1,29 @@
+generated: '2026-07-17'
+method: searched
+source: https://agentuity.dev/migration
+versioning:
+  scheme: platform-generation
+  current: v3
+  docs: https://agentuity.dev/reference
+  notes: >-
+    Platform is on the v3 framework-first generation. The SDK/CLI follow semver (current
+    3.1.x); see changelog/agentuity-changelog.yml.
+deprecation:
+  policy_url: https://agentuity.dev/migration
+  migration_cli: https://agentuity.dev/migration/migrate-cli
+  notes: >-
+    v2 runtime apps are being migrated to the v3 framework-first model via documented
+    migration guides and a migration CLI (agentuity migrate). The legacy CLI repo
+    (agentuity/cli, Go) has been deprecated in favor of the @agentuity/sdk monorepo.
+    No formal dated Sunset-header deprecation policy (RFC 8594) was located.
+status_page:
+  found: false
+  notes: >-
+    No confirmed first-party status page. An agentuity.statuspage.io host resolves but
+    returns a generic (unbranded) Atlassian Statuspage placeholder, so it is not asserted
+    as an Agentuity status page. No StatusPage pointer emitted.
+sla:
+  found: false
+migration:
+  from_v2_to_v3: https://agentuity.dev/migration/from-v2
+  runtime_to_frameworks: https://agentuity.dev/migration/runtime-to-frameworks

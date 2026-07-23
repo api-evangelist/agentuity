@@ -1,0 +1,38 @@
+generated: '2026-07-17'
+method: searched
+source: https://agentuity.dev/reference/cli/agent-skills
+docs: https://agentuity.dev/reference/cli/agent-skills
+description: >-
+  Agentuity publishes first-party Agent Skills — npm-distributed capabilities that teach a
+  coding agent how to create, build, and deploy on Agentuity. Installed via the agentuity
+  CLI or the `skills` CLI, plus dedicated Claude Code and OpenCode plugins.
+install:
+- command: agentuity skills install
+  description: Install and sync Agentuity Agent Skills via the CLI.
+- command: npx skills add agentuity/sdk/skills --yes
+  description: Install bundled skills from the SDK source with the skills CLI.
+- command: npx skills add agentuity/sdk/skills --skill agentuity-ai --yes
+  description: Install a single named skill.
+packages:
+- name: "@agentuity/skills"
+  registry: npm
+  description: The bundled Agentuity skill content package.
+- name: skills-npm
+  registry: npm
+  description: Discovers and symlinks npm-bundled skills.
+skills:
+- name: agentuity-ai
+  source: agentuity/sdk/skills
+  description: >-
+    Agent-driven setup and operation skill — start with `agentuity ai intro`, then run the
+    same create, import, dev, build, and deploy commands a human would run.
+plugins:
+- name: Claude Code plugin
+  docs: https://agentuity.dev/reference/cli/claude-code-plugin
+  description: Auto-activated skills for deploying and building on Agentuity inside Claude Code.
+- name: OpenCode plugin
+  docs: https://agentuity.dev/reference/cli/opencode-plugin
+notes: >-
+  These are provider-published skills captured from the docs. Agentuity does not publish a
+  public OpenAPI/Swagger spec, so no additional operation-grounded skills were generated
+  (per pipeline discipline — skills must be grounded in real operationIds).

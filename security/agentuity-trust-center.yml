@@ -1,0 +1,16 @@
+generated: '2026-07-17'
+method: searched
+probe: true
+source: https://agentuity.com/security
+url: https://agentuity.com/security
+certifications:
+- SOC 2
+- HIPAA
+- GDPR
+- FIPS 140
+evidence:
+- source: https://agentuity.com/security
+  keywords:
+  - soc 2
+  - hipaa
+  - gdpr

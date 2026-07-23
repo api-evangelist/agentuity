@@ -1,0 +1,75 @@
+generated: '2026-07-17'
+method: searched
+source: https://agentuity.dev/reference/cli
+docs: https://agentuity.dev/reference/cli
+name: agentuity
+description: >-
+  The Agentuity CLI builds, manages, and deploys framework apps and AI agents to the
+  Agentuity Cloud Platform. Agent-friendly with --json output, --explain previews,
+  --dry-run validation, and --services scaffolding on create.
+repository: https://github.com/agentuity/cli
+language: go
+install:
+- method: npm
+  command: npm create agentuity
+- method: npm-global
+  command: npm install -g @agentuity/cli
+- method: homebrew
+  command: brew install agentuity/tap/agentuity
+  tap: https://github.com/agentuity/homebrew-tap
+- method: github-action-setup
+  command: agentuity/setup-action
+global_flags:
+- "--json"
+- "--explain"
+- "--dry-run"
+- "--services"
+command_groups:
+- group: getting-started
+  docs: https://agentuity.dev/reference/cli/getting-started
+  commands: [login, new, create, import]
+- group: development
+  docs: https://agentuity.dev/reference/cli/development
+  commands: [dev]
+- group: deployment
+  docs: https://agentuity.dev/reference/cli/deployment
+  commands: [build, deploy]
+- group: configuration
+  docs: https://agentuity.dev/reference/cli/configuration
+  commands: [env, secrets, apikey]
+- group: storage
+  docs: https://agentuity.dev/reference/cli/storage
+  commands: [kv, storage, vector, db, stream]
+- group: sandbox
+  docs: https://agentuity.dev/reference/cli/sandbox
+  commands: [sandbox]
+- group: coder
+  docs: https://agentuity.dev/reference/cli/coder
+  commands: [coder]
+- group: oauth
+  docs: https://agentuity.dev/reference/cli/oauth
+  commands: [oauth]
+- group: agent-skills
+  docs: https://agentuity.dev/reference/cli/agent-skills
+  commands: [skills]
+- group: ai-commands
+  docs: https://agentuity.dev/reference/cli/ai-commands
+  commands: [ai]
+- group: monitoring
+  docs: https://agentuity.dev/reference/cli/monitoring
+  commands: [monitor]
+- group: debugging
+  docs: https://agentuity.dev/reference/cli/debugging
+  commands: [ssh, debug]
+- group: profiles
+  docs: https://agentuity.dev/reference/cli/profiles
+  commands: [profile]
+key_flows:
+- Scaffold a framework starter and add Agentuity services (npm create agentuity)
+- Run local dev with Agentuity environment wiring and AI Gateway routing (agentuity dev)
+- Build a deployment bundle and deploy to the cloud (agentuity build / agentuity deploy)
+- Manage KV/S3/Vector/Database/Stream storage, sandboxes, and OAuth apps from the CLI
+- Install and sync Agentuity Agent Skills (agentuity skills install)
+plugins:
+- Claude Code plugin: https://agentuity.dev/reference/cli/claude-code-plugin
+- OpenCode plugin: https://agentuity.dev/reference/cli/opencode-plugin

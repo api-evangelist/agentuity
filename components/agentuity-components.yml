@@ -1,0 +1,31 @@
+generated: '2026-07-17'
+method: searched
+source: >-
+  https://www.agentuity.com/, https://agentuity.dev/reference/sdk-reference,
+  https://www.npmjs.com/org/agentuity
+description: >-
+  Client-side and framework-integrated surfaces distinct from the server-side SDK service
+  clients. Agentuity generates type-safe React hooks for its typed API routes and ships a
+  browser analytics library, alongside the hosted Agentuity Console (Workbench) for
+  testing and debugging.
+families:
+- family: react-hooks
+  type: generated-client-hooks
+  description: >-
+    Auto-generated, end-to-end type-safe React hooks for Agentuity API routes (Hono routes
+    with auth and rate limiting), with streaming support for React frontends.
+  loader: "@agentuity/sdk (framework code)"
+- family: browser-analytics
+  type: browser-library
+  package: "@agentuity/analytics"
+  registry: npm
+  description: Browser analytics for Agentuity applications.
+- family: console-workbench
+  type: hosted-surface
+  url: https://app.agentuity.com
+  description: >-
+    The Agentuity Console / Workbench — a hosted development environment for testing,
+    debugging, replaying sessions, and inspecting observability data.
+notes: >-
+  These are UI/client-side surfaces; server-side service clients (KV, vector, object, DB,
+  queue, etc.) are catalogued in packages/agentuity-packages.yml.

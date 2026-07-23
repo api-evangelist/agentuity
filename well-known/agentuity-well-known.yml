@@ -1,0 +1,26 @@
+generated: '2026-07-17'
+method: searched
+source: live probes of Agentuity hosts
+hosts_probed:
+- https://agentuity.com
+- https://www.agentuity.com
+- https://app.agentuity.com
+- https://api.agentuity.com
+- https://agentuity.dev
+documents:
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/openid-configuration
+  status: 404
+- path: /.well-known/oauth-authorization-server
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
+notes: >-
+  No /.well-known/ discovery documents are published on any probed host (all 404 across
+  agentuity.com, www, app, api, and agentuity.dev). Agentuity documents OAuth 2.0 / OIDC
+  application support in-product (agentuity.dev/services/oidc-provider) but does not expose
+  a public openid-configuration discovery endpoint at the marketing/API hosts. Absence
+  recorded as valid data.
