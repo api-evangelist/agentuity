@@ -12,6 +12,17 @@ description: >-
   on-prem, multi-cloud, or edge via the Gravity Network. A documented REST API,
   first-party JavaScript/TypeScript, Python, and Go SDKs, published Agent Skills, and
   Claude Code / OpenCode plugins round out the developer surface.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
