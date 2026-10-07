@@ -1,0 +1,46 @@
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-10-07'
+method: searched
+source: https://agentcompany.com/pricing
+sources:
+- https://agentcompany.com/pricing
+- https://agentuity.com/pricing
+provenance:
+  tool: all/0-working/economics/harvest_pricing.py
+  run: 20261007T104522
+  grounding: every price_text was found verbatim in the fetched page text
+audience: business-product
+pricing_basis: tiered-subscription
+delivery:
+  delivery: managed
+  method: page
+  read: '2026-10-07'
+published: true
+note: Page prices managed AI agent engagements with monthly fees plus one-time setup; no API usage pricing
+  shown.
+plan_count: 3
+currency: USD
+plans:
+- name: Agent Employee
+  price_text: $750 / month
+  price: 750
+  currency: USD
+  period: month
+  unit: one recurring job
+  included_quota: One recurring job, such as handling quotes, estimates, or outbound sales and marketing.
+  overage: $2,500 one-time setup
+- name: Agent Employee+
+  price_text: $1,500 / month
+  price: 1500
+  currency: USD
+  period: month
+  unit: up to three recurring jobs
+  included_quota: Up to three recurring jobs, set up around how your business works.
+  overage: $4,000 one-time setup
+- name: Agent Team
+  price_text: From $2,500 / month
+  price: 2500
+  currency: USD
+  period: month
+  included_quota: Larger workloads across different parts of your business.
+  overage: One-time setup from $5,000
