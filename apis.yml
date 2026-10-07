@@ -80,6 +80,8 @@ apis:
   - type: Authentication
     url: authentication/agentuity-authentication.yml
 common:
+- type: Plans
+  url: plans/agentuity-plans-pricing.yml
 - type: Website
   url: https://www.agentuity.com/
 - type: DeveloperPortal
