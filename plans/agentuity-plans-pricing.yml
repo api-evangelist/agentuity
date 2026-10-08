@@ -44,3 +44,33 @@ plans:
   period: month
   included_quota: Larger workloads across different parts of your business.
   overage: One-time setup from $5,000
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - hybrid
+  units: []
+  plans:
+  - name: Agent Employee
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - other
+    periods:
+    - month
+  - name: Agent Employee+
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - other
+    periods:
+    - month
+  - name: Agent Team
+    access: other
+    model: hybrid
+    model_how: derived
+    units: []
+    periods:
+    - month
