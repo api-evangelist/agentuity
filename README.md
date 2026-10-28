@@ -64,6 +64,111 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Agentuity is a company surfaced as a portfolio company of bloomberg-beta and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Agentuity is a full-stack cloud platform for building, deploying, and operating AI agents and the framework apps around them. Developers keep their existing framework (Next.js, Hono, React Router, SvelteKit, Nuxt, Astro, Vite React, TanStack Start) and attach Agentuity service clients for key-value, vector, object, and Postgres storage, durable streams, queues, webhooks, email, and cron schedules, plus sandboxes (isolated Linux containers), an AI Gateway that routes to OpenAI/Anthropic/Groq/Google, and OpenTelemetry observability. The agentuity CLI scaffolds projects, runs local development with environment wiring, and deploys to managed cloud, private cloud, on-prem, multi-cloud, or edge via the Gravity Network. A documented REST API, first-party JavaScript/TypeScript, Python, and Go SDKs, published Agent Skills, and Claude Code / OpenCode plugins round out the developer surface.
 
-Backed by: bloomberg-beta — https://www.agentuity.com/
+**Areas:** Company · Agents · Artificial Intelligence · Cloud · Serverless · Platform · Developer Tools · LLM · Infrastructure · Deployment · AI Gateway
+
+## Agentuity on APIs.io
+
+Everything profiled for Agentuity is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/agentuity/](https://apis.io/providers/agentuity/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Agentuity Platform REST API](https://apis.io/apis/agentuity/agentuity-platform-rest-api/) — Direct HTTP access to Agentuity platform services — projects, deployments, API keys, OAuth applications, storage (key-value, vector, object, Postgres),…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### AsyncAPI (1)
+
+Event-driven and webhook contracts.
+
+- [Agentuity Webhooks](https://apis.io/asyncapis/agentuity/agentuity-webhooks/)
+
+#### Security (4)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Agentuity Authentication](https://apis.io/security/agentuity/agentuity-authentication/)
+- [Agentuity Domain Security](https://apis.io/security/agentuity/agentuity-domain-security/)
+- [Agentuity Trust Center](https://apis.io/security/agentuity/agentuity-trust-center/)
+- [Agentuity Vulnerability Disclosure](https://apis.io/security/agentuity/agentuity-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Agentuity Plans Pricing](https://apis.io/plans/agentuity/agentuity-plans-pricing/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.agentuity.com/)
+- [Documentation](https://agentuity.dev)
+- [Getting started](https://agentuity.dev/get-started)
+- [API reference](https://agentuity.dev/reference/api)
+- [Pricing](https://agentuity.com/pricing)
+- [Sign up](https://app.agentuity.com/sign-up)
+- [Support](https://discord.gg/UPRUw4cn65)
+- [Security](https://agentuity.com/security)
+- [Compliance](https://agentuity.com/security)
+- [Terms of service](https://agentuity.com/terms)
+- [Privacy policy](https://agentuity.com/privacy)
+- [GitHub](https://github.com/agentuity)
+
+## API Evangelist rating
+
+**Kin Score 56.3** — strong · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 39.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 36.8 |
+| Developer ergonomics | 69.0 |
+| Access clarity | 78.9 |
+
+**Agent readiness 23.4** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | yes |
+| Agent Skills | yes |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 32.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/agentuity/](https://apis.io/providers/agentuity/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Agentuity: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/agentuity/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
